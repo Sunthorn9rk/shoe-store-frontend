@@ -18,7 +18,9 @@ const ProductDetailsCarousel = ({images}) => {
         {images?.map((img) => (
           <img
             key={img.id}
-            src={`http://127.0.0.1:1337${img.attributes.url}`}
+            src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${img.attributes.url}`}
+            // src={`http://127.0.0.1:1337${img.attributes.url}`}
+            // {`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${p?.thumbnail?.data?.attributes?.url}`}
             alt={img.attributes.name}
           />
         ))}

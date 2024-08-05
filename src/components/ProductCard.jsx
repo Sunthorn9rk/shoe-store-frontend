@@ -12,7 +12,8 @@ const ProductCard = ({data: {attributes: p, id}}) => {
       <Image
         width={500}
         height={500}
-        src={`http://127.0.0.1:1337${p?.thumbnail?.data?.attributes?.url}`}
+        src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${p?.thumbnail?.data?.attributes?.url}`}
+        // src={`http://127.0.0.1:1337${p?.thumbnail?.data?.attributes?.url}`}
         alt={p.name}
       />
 
