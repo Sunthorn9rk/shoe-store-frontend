@@ -10,9 +10,7 @@ const ProductCard = ({data: {attributes: p, id}}) => {
       href={`/product/${p.slug}`}
       className="transform overflow-hidden bg-white duration-200 hover:scale-105 cursor-pointer"
     >
-      <Image
-        width={500}
-        height={500}
+      <img
         src={`${API_URL}${p?.thumbnail?.data?.attributes?.url}`}
         // src={`http://127.0.0.1:1337${p?.thumbnail?.data?.attributes?.url}`}
         alt={p.name}
