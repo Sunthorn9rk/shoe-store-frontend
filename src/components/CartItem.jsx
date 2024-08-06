@@ -4,6 +4,7 @@ import React from "react";
 import {RiDeleteBin6Line} from "react-icons/ri";
 import {removeFromCart, updateCart} from "../../store/cartSlice";
 import {useDispatch} from "react-redux";
+import {API_URL, STRAPI_API_TOKEN} from "../../utils/urls";
 
 const CartItem = ({data}) => {
   const p = data.attributes;
@@ -24,11 +25,10 @@ const CartItem = ({data}) => {
     <div className="flex py-5 gap-3 md:gap-5 border-b">
       {/* IMAGE START */}
       <div className="shrink-0 aspect-square w-[50px] md:w-[120px]">
-        <Image
-          src={`http://127.0.0.1:1337${p?.thumbnail?.data?.attributes?.url}`}
+        <img
+          src={`${API_URL}${p?.thumbnail?.data?.attributes?.url}`}
+          // src={`http://127.0.0.1:1337${p?.thumbnail?.data?.attributes?.url}`}
           alt={p.name}
-          width={120}
-          height={120}
         />
       </div>
       {/* IMAGE END */}
