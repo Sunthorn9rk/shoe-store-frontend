@@ -11,8 +11,8 @@ const ProductCard = ({data: {attributes: p, id}}) => {
       className="transform overflow-hidden bg-white duration-200 hover:scale-105 cursor-pointer"
     >
       <img
-        src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${p?.thumbnail?.data?.attributes?.url}`}
-        // src={`${API_URL}${p?.thumbnail?.data?.attributes?.url}`}
+        // src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${p?.thumbnail?.data?.attributes?.url}`}
+        src={`${API_URL}${p?.thumbnail?.data?.attributes?.url}`}
         // src={`http://127.0.0.1:1337${p?.thumbnail?.data?.attributes?.url}`}
         alt={p.name}
       />

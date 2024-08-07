@@ -26,8 +26,8 @@ const CartItem = ({data}) => {
       {/* IMAGE START */}
       <div className="shrink-0 aspect-square w-[50px] md:w-[120px]">
         <img
-          src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${p?.thumbnail?.data?.attributes?.url}`}
-          // src={`${API_URL}${p?.thumbnail?.data?.attributes?.url}`}
+          // src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${p?.thumbnail?.data?.attributes?.url}`}
+          src={`${API_URL}${p?.thumbnail?.data?.attributes?.url}`}
           // src={`http://127.0.0.1:1337${p?.thumbnail?.data?.attributes?.url}`}
           alt={p.name}
         />
